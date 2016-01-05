@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mio Satake</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+    <!--footerFixed.js-->
+    <script type="text/javascript" src="js/footerFixed.js"></script>
+
+    <!--mosaic-->
+    <link rel="stylesheet" href="css/mosaic.css" type="text/css" media="screen">
+    <script type="text/javascript" src="js/mosaic.1.0.1.js"></script>
+    <script type="text/javascript">
+        jQuery(function ($) {
+            $('.fade').mosaic();
+        });
+    </script>
+
+    <!--pagePilling.js-->
+    <link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.css">
+    <script type="text/javascript" src="js/jquery.pagepiling.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#pagepiling').pagepiling({
+                menu: '#menu2',
+                anchors: ['about', 'skills', 'works', 'contact'],
+                sectionsColor: ['#D8E2DC', '#FFE5D9', '#FFCAD4', '#E8C0DF'],
+                scrollingSpeed: 800,
+                sectionSelector: '.page'
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav id="nav">
+            <ul id="menu2">
+                <li><a class="menu" href="#contact">Contact</a></li>
+                <li><a class="menu" href="#works">Works</a></li>
+                <li><a class="menu" href="#skills">Skills</a></li>
+                <li><a class="menu" href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main" id="pagepiling">
+        <div class="page">
+            <div class="contents">
+                <h1>Mio Satake | 佐竹澪</h1>
+                <br>
+                <br>
+                <h2>About</h2>
+                <p> 佐竹澪
+                    <br>明治大学総合数理学部 <a href="http://www.fms-meiji.jp/" target="_blank">先端メディアサイエンス学科</a>
+                    <br><a href="http://kougaku-lab.org/" target="_blank">橋本研究室</a> 3年
+                    <br>
+                    <br> Mio Satake
+                    <br><a href="http://www.fms-meiji.jp/" target="_blank">Department of Frontier Media Science</a>, Meiji University
+                    <br><a href="http://kougaku-lab.org/" target="_blank">Hashimoto Lab</a>
+                    <br>
+                </p>
+            </div>
+        </div>
+        <div class="page">
+            <div class="contents">
+                <h2>Skills</h2>
+                <h3>Use often | よく使う</h3>
+                <p>Processing / HTML / CSS / WordPress</p>
+                <br>
+                <h3>Use sometimes | ときどき使う</h3>
+                <p>Arduino / PHP / JavaScript / C++ / Illustrator / Photoshop</p>
+                <br>
+                <h3>Use rarely | 使ったことがある程度</h3>
+                <p>SQLite / MATLAB / Java</p>
+            </div>
+        </div>
+        <div class="page" id="works">
+            <div class="contents">
+                <h2>Works</h2>
+                <h3>Activities at Lab | 研究室での活動</h3>
+                <ul>
+                    <li>
+                        <div class="mosaic-block fade">
+                            <a href="http://kougaku-lab.org/projects/1st2014_PRORI-ON/index.html" target="_blank" class="mosaic-overlay">
+                                <div class="details">
+                                    <h4>PRORI-ON</h4>
+                                    <p>2014.4 - 2014.5
+                                        <br>
+                                        <br> 既存のプロダクトを追実装するグループ課題として、４人で製作しました。本棚に映像を投影し、YAMAHAの電子楽器TENORI-ONの盤面に見立てました。 </p>
+                                </div>
+                            </a>
+                            <img src="img/prorion.jpg">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mosaic-block fade">
+                            <a href="http://kougaku-lab.org/projects/box2014_tsundere/index.html" target="_blank" class="mosaic-overlay">
+                                <div class="details">
+                                    <h4>ツンデレな箱</h4>
+                                    <p>2014.7 - 2014.8
+                                        <br>
+                                        <br>「人を驚かせる新しいびっくり箱」をテーマにした製作で、近づくと逃げていき、離れると追いかけてくる、感情をもっているかのような箱を作りました。</p>
+                                </div>
+                            </a>
+                            <img src="img/hako.jpg">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mosaic-block fade">
+                            <a href="http://kougaku-lab.org/projects/sound2014_shinkei/index.html" target="_blank" class="mosaic-overlay">
+                                <div class="details">
+                                    <h4>音神経衰弱</h4>
+                                    <p>2014.10 - 2014.12
+                                        <br>
+                                        <br>「音を使ったプロダクト」をテーマにした製作で、同じ絵柄のカードではなく、同じ音の鳴るカードを合わせる神経衰弱を作りました。
+                                    </p>
+                                </div>
+                            </a>
+                            <img src="img/shinkei.jpg">
+                        </div>
+                    </li>
+                </ul>
+                <h3>Others | その他</h3>
+                <ul>
+                    <li>
+                        <div class="mosaic-block fade">
+                            <a href="http://bohsince2013.webcrow.jp/" target="_brank" class="mosaic-overlay">
+                                <div class="details">
+                                    <h4>ブラスオルケスタ八王子 Webページ</h4>
+                                    <p>2014.12　公開
+                                        <br>2015.11　WordPress化
+                                        <br>
+                                        <br>所属する吹奏楽団のWebページ。Bootstrapのテンプレートを使用しています。</p>
+                                </div>
+                            </a>
+                            <img src="img/bohsince2013.png">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mosaic-block fade">
+                            <a href="https://youtu.be/oHjQa1s3vEA" target="_brank" class="mosaic-overlay">
+                                <div class="details">
+                                    <h4>コマ撮り「水滴」</h4>
+                                    <p>2015.5
+                                        <br>
+                                        <br>「映像とアニメーション」という授業の課題として、初めてコマ撮りの映像を作りました。</p>
+                                </div>
+                            </a>
+                            <img src="img/stopmotion.png">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mosaic-block fade">
+                            <a href="#" target="_brank" class="mosaic-overlay">
+                                <div class="details">
+                                    <h4>Portfolio Site</h4>
+                                    <p>2016.1
+                                        <br>
+                                        <br>このサイト。とりあえず1日で出来たところまでで、未完成ですが公開しています。レスポンシブ対応したいです。
+                                    </p>
+                                </div>
+                            </a>
+                            <img src="img/portfolio.png">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="page">
+            <div class="contents">
+                <h2>Contact</h2>
+                <p>mail : <a href="mailto:mtus9.s26@gmail.com">mtus9.s26[at]gmail.com</a>
+                    <br>
+                    <br> twitter : <a href="https://twitter.com/m__stk" target="_brank">@m__stk</a></p>
+                <div id="footer">
+                    <p>2016 © Mio Satake</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
