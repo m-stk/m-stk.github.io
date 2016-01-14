@@ -1,39 +1,31 @@
 @charset "UTF-8";
-
 body {
     font-family: 'Hiragino Kaku Gothic ProN', Meiryo, 'MS PGothic', Sans-serif;
-    color: #5d5d5d;
-    font-size: 12px;
+    color: #EFF9F0;
     margin: 0;
     padding: 0;
 }
 
+h3 {
+    font-size: 1em;/*16px;*/
+    margin-bottom:-10px;
+}
+
 p {
-    color: #5d5d5d;
-    font-size: 14px;
+    color: #EFF9F0;
+    font-size: 0.9em/*14px*/;
 }
 
 a {
     text-decoration: none;
 }
 
-/*@media (min-width: 410px) and (max-width: 1500px) {
-    p {
-        font-size: 14px;
-        //        line-height: 28px;
-    }
+ul li {
+    list-style: none;
 }
 
-@media (max-width: 409px) {
-    p {
-        font-size: 12px;
-        //       line-height: 20px;
-    }
-}*/
-
-@charset "UTF-8";
 header {
-    background: center top rgba(255, 255, 255, 0.27);
+    background: center top rgba(255, 255, 255, 0.05);
     background-size: 100% 60px;
     position: fixed;
     left: 0;
@@ -57,44 +49,61 @@ header {
     width: 120px;
     height: 50px;
     float: right;
-    list-style: none;
-    font-size: 16px;
+    font-size: 1.0.9em;/*16px;*/
 }
 
 #nav ul li .menu {
     padding: 16px 0 10px 0;
     display: block;
     text-align: center;
-    color: #555;
+    color: #EFF9F0;
 }
 
 #nav ul li .menu:hover {
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(0, 0, 0, 0.1);
     -webkit-transition: all 0.8s;
     -moz-transition: all 0.8s;
     transition: all 0.8s;
 }
 
-.main {}
+@media screen and (max-width: 768px) {
+    #nav ul li {
+        color: blue;
+        position: relative;
+        width: 70px;
+        height: 40px;
+        float: right;
+        font-size: 14px;
+    }
+    #nav ul li .menu {
+        padding: 12px 4px 8px 0;
+        display: block;
+        text-align: center;
+        color: #EFF9F0;
+    }
+}
 
 .contents {
     width: 100%;
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
-    padding: 50px 50px;
+    padding: 35px 8%;
+}
+
+@media screen and (max-width: 768px) {
+    .contents {
+        width: auto;
+    }
 }
 
 .contents a {
-    color: #5d5d5d;
-    border-bottom: 1px dashed #5d5d5d;
+    color: #EFF9F0;
+    border-bottom: 1px dashed #EFF9F0;
 }
 
 #works ul {
-    /*    display: table;
-    table-layout: fixed;*/
     width: 100%;
     margin-left: -40px;
-    /*なんで？*/
 }
 
 #works li {
@@ -109,19 +118,50 @@ header {
 }
 
 .details {
-    padding: 20px;
+    padding: 18px;
 }
 
 #works h4 {
     color: #ffffff;
-    font-size: 14px;
+    font-size: 0.9em;/*14px;*/
     margin: 0;
 }
 
 #works p {
     color: #ffffff !important;
-    font-size: 12px;
-    line-height: 15px;
+    font-size:0.75em;/* 12px;*/
+    line-height: 18px;
+}
+
+#works .under {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    #works li {
+        margin: 0 5px 5px 0;
+    }
+    #works img {
+        display: block;
+        width: 70px;
+        height: 60px;
+        border-radius: 5px;
+        float: left;
+        margin-right: 5px;
+    }
+    #works .under {
+        display: inline;
+        font-size: 0.8em;/*12px;*/
+    }
+    #pp-nav {
+        display: none;
+    }
+    #works h4 {
+        display: none;
+    }
+    #works .details {
+        display: none;
+    }
 }
 
 #footer {

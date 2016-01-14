@@ -4,20 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Mio Satake</title>
-    <link rel="stylesheet" href="style.css">
+
+
     <script src="js/jquery.min.js"></script>
-
-    <!--footerFixed.js-->
-    <script type="text/javascript" src="js/footerFixed.js"></script>
-
-    <!--mosaic-->
-    <link rel="stylesheet" href="css/mosaic.css" type="text/css" media="screen">
+    <script type="text/javascript"> 
+        if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
+             // smartphone
+            document.write('<link rel="stylesheet" href="smartphone.css">');
+        } else {
+            //PC
+            document.write('<link rel="stylesheet" href="style.css">');
+            
+            //mosaic
+            document.write('<link rel="stylesheet" href="css/mosaic.css" type="text/css" media="screen">');
+            var s = document.createElement("script");
+            s.type = "text/javascript";
+            s.src = "js/mosaic.1.0.1.js"; 
+            document.getElementsByTagName("head")[0].appendChild(s);
+            jQuery(function ($) {
+                $('.fade').mosaic();
+            });
+        }
+    </script>
     <script type="text/javascript" src="js/mosaic.1.0.1.js"></script>
     <script type="text/javascript">
-        jQuery(function ($) {
-            $('.fade').mosaic();
-        });
     </script>
+
+    <script type="text/javascript" src="js/footerFixed.js"></script>
 
     <!--pagePilling.js-->
     <link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.css">
@@ -27,7 +40,8 @@
             $('#pagepiling').pagepiling({
                 menu: '#menu2',
                 anchors: ['about', 'skills', 'works', 'contact'],
-                sectionsColor: ['#D8E2DC', '#FFE5D9', '#FFCAD4', '#E8C0DF'],
+                //sectionsColor: ['#D8E2DC', '#FFE5D9', '#FFCAD4', '#E8C0DF'],
+                sectionsColor: ['#4F5D75', '#587B7F', '#93827F', '#433F3E'],
                 scrollingSpeed: 800,
                 sectionSelector: '.page'
             });
@@ -55,7 +69,7 @@
                 <br>
                 <h2>About</h2>
                 <p> 佐竹澪
-                    <br>明治大学総合数理学部 <a href="http://www.fms-meiji.jp/" target="_blank">先端メディアサイエンス学科</a>
+                    <br>明治大学 総合数理学部 <a href="http://www.fms-meiji.jp/" target="_blank">先端メディアサイエンス学科</a>
                     <br><a href="http://kougaku-lab.org/" target="_blank">橋本研究室</a> 3年
                     <br>
                     <br> Mio Satake
@@ -75,7 +89,7 @@
                 <p>Arduino / PHP / JavaScript / C++ / Illustrator / Photoshop</p>
                 <br>
                 <h3>Use rarely | 使ったことがある程度</h3>
-                <p>SQLite / MATLAB / Java</p>
+                <p>SQLite / Java</p>
             </div>
         </div>
         <div class="page" id="works">
@@ -85,86 +99,96 @@
                 <ul>
                     <li>
                         <div class="mosaic-block fade">
-                            <a href="http://kougaku-lab.org/projects/1st2014_PRORI-ON/index.html" target="_blank" class="mosaic-overlay">
-                                <div class="details">
-                                    <h4>PRORI-ON</h4>
-                                    <p>2014.4 - 2014.5
-                                        <br>
-                                        <br> 既存のプロダクトを追実装するグループ課題として、４人で製作しました。本棚に映像を投影し、YAMAHAの電子楽器TENORI-ONの盤面に見立てました。 </p>
+                            <a href="http://kougaku-lab.org/projects/1st2014_PRORI-ON/index.html" target="_blank">
+                                <div class="mosaic-overlay">
+                                    <div class="details">
+                                        <h4>PRORI-ON</h4>
+                                        <p>2014.4 - 2014.5
+                                            <br>
+                                            <br> 既存のプロダクトを追実装するグループ製作課題。本棚に映像を投影し、YAMAHAの電子楽器TENORI-ONに見立てました。 </p>
+                                    </div>
                                 </div>
+                                <img src="img/prorion.jpg">
                             </a>
-                            <img src="img/prorion.jpg">
+                            <p class="under">PRORI-ON&nbsp;（2014.4 - 2014.5）
+                                <br>グループ製作。本棚に映像を投影し、YAMAHAの電子楽器TENORI-ONに見立てた作品。</p>
+                            <br>
                         </div>
                     </li>
                     <li>
                         <div class="mosaic-block fade">
-                            <a href="http://kougaku-lab.org/projects/box2014_tsundere/index.html" target="_blank" class="mosaic-overlay">
-                                <div class="details">
-                                    <h4>ツンデレな箱</h4>
-                                    <p>2014.7 - 2014.8
+                            <a href="http://kougaku-lab.org/projects/box2014_tsundere/index.html" target="_blank">
+                                <div class="mosaic-overlay">
+                                    <div class="details">
+                                        <h4>ツンデレな箱</h4>
+                                        <p>2014.7 - 2014.8
+                                            <br>
+                                            <br>新しいびっくり箱をテーマにした製作で、近づくと逃げていき、離れると追いかけてくる、感情をもっているかのような箱を作りました。</p>
                                         <br>
-                                        <br>「人を驚かせる新しいびっくり箱」をテーマにした製作で、近づくと逃げていき、離れると追いかけてくる、感情をもっているかのような箱を作りました。</p>
+                                    </div>
                                 </div>
+                                <img src="img/hako.jpg">
                             </a>
-                            <img src="img/hako.jpg">
+                            <p class="under">ツンデレな箱&nbsp;（2014.7 - 2014.8）
+                                <br>近づくと逃げていき、離れると追いかけてくる、感情をもっているかのような箱。</p>
+                            <br>
                         </div>
                     </li>
                     <li>
                         <div class="mosaic-block fade">
-                            <a href="http://kougaku-lab.org/projects/sound2014_shinkei/index.html" target="_blank" class="mosaic-overlay">
-                                <div class="details">
-                                    <h4>音神経衰弱</h4>
-                                    <p>2014.10 - 2014.12
-                                        <br>
-                                        <br>「音を使ったプロダクト」をテーマにした製作で、同じ絵柄のカードではなく、同じ音の鳴るカードを合わせる神経衰弱を作りました。
-                                    </p>
+                            <a href="http://kougaku-lab.org/projects/sound2014_shinkei/index.html" target="_blank">
+                                <div class="mosaic-overlay">
+                                    <div class="details">
+                                        <h4>音神経衰弱</h4>
+                                        <p>2014.10 - 2014.12
+                                            <br>
+                                            <br>音を使ったプロダクトをテーマにした製作で、同じ絵柄のカードではなく、同じ音の鳴るカードを合わせる神経衰弱を作りました。
+                                        </p>
+                                    </div>
                                 </div>
+                                <img src="img/shinkei.jpg">
                             </a>
-                            <img src="img/shinkei.jpg">
+                            <p class="under">音神経衰弱&nbsp;（2014.10 - 2014.12）
+                                <br>同じ絵柄のカードではなく、同じ音の鳴るカードを合わせる神経衰弱。</p>
                         </div>
                     </li>
                 </ul>
-                <h3>Others | その他</h3>
+                <h3 style="clear:both;">Others | その他</h3>
                 <ul>
                     <li>
                         <div class="mosaic-block fade">
-                            <a href="http://bohsince2013.webcrow.jp/" target="_brank" class="mosaic-overlay">
-                                <div class="details">
-                                    <h4>ブラスオルケスタ八王子 Webページ</h4>
-                                    <p>2014.12　公開
-                                        <br>2015.11　WordPress化
-                                        <br>
-                                        <br>所属する吹奏楽団のWebページ。Bootstrapのテンプレートを使用しています。</p>
+                            <a href="http://bohsince2013.webcrow.jp/" target="_brank">
+                                <div class="mosaic-overlay">
+                                    <div class="details">
+                                        <h4>ブラスオルケスタ八王子 Webページ</h4>
+                                        <p>2014.12　公開
+                                            <br>2015.11　WordPress化
+                                            <br>
+                                            <br>所属する吹奏楽団のWebサイト。Bootstrapのテンプレートを使用しています。</p>
+                                    </div>
                                 </div>
+                                <img src="img/bohsince2013.png">
                             </a>
-                            <img src="img/bohsince2013.png">
+                            <p class="under">ブラスオルケスタ八王子Webサイト&nbsp;（2014.12）
+                                <br>所属する吹奏楽団のWebサイト。</p>
                         </div>
                     </li>
                     <li>
                         <div class="mosaic-block fade">
-                            <a href="https://youtu.be/oHjQa1s3vEA" target="_brank" class="mosaic-overlay">
-                                <div class="details">
-                                    <h4>コマ撮り「水滴」</h4>
-                                    <p>2015.5
+                            <a href="https://youtu.be/oHjQa1s3vEA" target="_brank">
+                                <div class="mosaic-overlay">
+                                    <div class="details">
+                                        <h4>コマ撮り「水滴」</h4>
+                                        <p>2015.5
+                                            <br>
+                                            <br>「映像とアニメーション」という授業の課題として、初めてコマ撮りの映像を作りました。</p>
                                         <br>
-                                        <br>「映像とアニメーション」という授業の課題として、初めてコマ撮りの映像を作りました。</p>
+                                    </div>
                                 </div>
+                                <img src="img/stopmotion.png">
                             </a>
-                            <img src="img/stopmotion.png">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="mosaic-block fade">
-                            <a href="#" target="_brank" class="mosaic-overlay">
-                                <div class="details">
-                                    <h4>Portfolio Site</h4>
-                                    <p>2016.1
-                                        <br>
-                                        <br>このサイト。とりあえず1日で出来たところまでで、未完成ですが公開しています。レスポンシブ対応したいです。
-                                    </p>
-                                </div>
-                            </a>
-                            <img src="img/portfolio.png">
+                            <p class="under">コマ撮り「水滴」&nbsp;（2015.5）
+                                <br>初めて作ったコマ撮りの映像。</p>
                         </div>
                     </li>
                 </ul>

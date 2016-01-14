@@ -1,0 +1,121 @@
+@charset "UTF-8";
+body {
+    width: 100%;
+    font-family: 'Hiragino Kaku Gothic ProN', Meiryo, 'MS PGothic', Sans-serif;
+    color: #EFF9F0;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 38px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+p {
+    color: #EFF9F0;    
+    font-size: 26px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+header {
+    background: center top rgba(255, 255, 255, 0.05);
+    background-size: 100% 120px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 101;
+}
+
+#nav {
+    float: right;
+    z-index: 1;
+    margin-right:10px;
+}
+
+#nav ul li {
+    width: 180px;
+    height: 120px;
+    line-height:120px;
+    float: right;
+    font-size: 38px;
+}
+
+#nav ul li .menu {
+    display: block;
+    text-align: center;
+    color: #EFF9F0;
+}
+
+#nav ul li .menu:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    transition: all 0.8s;
+}
+
+.contents {
+    width: auto;
+    /*とりあえずworksが入りきる幅
+    max-width: 640px;*/
+    margin: 0;
+    padding: 120px 60px 60px 60px;
+}
+
+.contents a {
+    color: #EFF9F0;    
+    border-bottom: 1px dashed #EFF9F0;
+}
+
+#works ul {
+    margin-left: -40px;
+}
+
+#works li {
+    margin: 0;
+    height: 160px;
+    margin-bottom:20px;
+}
+
+#works img {
+    clear:both;
+    width: 160px;
+    height: 160px;/*#works liのheightと合わせる*/
+    border-radius: 5px;
+    float: left;
+    margin: 0 20px 20px 0;/*#works liのmargin-bottomと合わせる*/
+}
+
+.mosaic-overlay {
+    display: none;
+}
+
+#works .under {
+    font-size: 28px;
+    margin:0;
+}
+
+#pp-nav {
+    display: none;
+}
+
+#footer {
+    margin: 0;
+    padding: 80px 0;
+    text-align: center;
+}
