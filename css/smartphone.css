@@ -79,7 +79,7 @@ header {
 
 .contents a {
     color: #EFF9F0;    
-    border-bottom: 1px dashed #EFF9F0;
+    border-bottom: none;/*1px dashed #EFF9F0;*/
 }
 
 #works ul {
@@ -87,17 +87,18 @@ header {
 }
 
 #works li {
+    float: left;
     margin: 0;
-    height: 160px;
+    height: 220px;
     margin-bottom:20px;
 }
 
 #works img {
-    clear:both;
-    width: 160px;
-    height: 160px;/*#works liのheightと合わせる*/
+    /*clear:both;*/
+    width: 220px;
+    height: 220px;/*#works liのheightと合わせる*/
     border-radius: 5px;
-    float: left;
+    /*float: left;*/
     margin: 0 20px 20px 0;/*#works liのmargin-bottomと合わせる*/
 }
 
@@ -105,7 +106,7 @@ header {
     display: none;
 }
 
-#works .under {
+#works .under {/*クリックすると...*/
     font-size: 28px;
     margin:0;
 }
