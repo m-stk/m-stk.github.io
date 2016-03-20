@@ -139,19 +139,20 @@ header {
 
 @media screen and (max-width: 768px) {
     #works li {
+        float: left;
         margin: 0 5px 5px 0;
     }
     #works img {
         display: block;
-        width: 70px;
-        height: 60px;
+        width: 120px;
+        height: 120px;
         border-radius: 5px;
-        float: left;
+        /*float: left;*/
         margin-right: 5px;
     }
     #works .under {
         display: inline;
-        font-size: 0.8em;/*12px;*/
+        font-size: 0.7em;/*12px;*/
     }
     #pp-nav {
         display: none;
